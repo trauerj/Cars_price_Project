@@ -1,1 +1,62 @@
-# Cars_price_Project
+# Car price estimator: Project Overview
+* Created a tool that estimates car prices (MAE ~461K HUF) to help customers.
+* Scraped over 1000 car descriptions from joautok using python.
+* Optimized Linear, Random Forest and Gradient Boosting Regressor using GridsearchCV to reach the best model.
+
+## Code
+* Python 3 (ipykernel)
+* Packages: pandas, numpy, sklearn, matplotlib, seaborn, plotly, json, bs4, requests, csv, re, io
+
+## Web Scraping
+Write a web scraper to scrape thousands of car postings(/advertisments) from joautok.hu. With each car, we got the following:
+* Brand and model
+* Type
+* Dealerships' name
+* Dealerships' location
+* Dealerships' evaluation
+* Production year
+* km
+* Price
+* Horsepower
+* Engine volume
+* Condition
+* Fuel type
+* Transmission type
+* etc.
+
+## Data cleaning
+After scraping the data, I need to clean it up so it was usable for our models. I made the following changes:
+* Removed rows with Nan values
+* Converted strings to numerics by removing words or letters
+* Transformed production year to age of car
+* Made a new column for brand, without model
+* Made a new column for dealership location if (based on) its in the capital or not.
+* Created a column for Yearly usage in km (Km/age)
+
+## EDA
+I looked at the distribution of the data and looked for outliers with boxplot. I made further analysis using Excel.
+
+## Model Building
+First, I transformed the categorical variables to dummy variables. Second, I removed the outliers using the interquartile range (iqr) $`(q1 -1.5*iqr) < data < (q3 + 1.5*iqr)`$
+
+After that i looked for the 21 most corralated features and made the models using just these features.
+
+I also split the data into train and test sets with a test size 20% in both scenario.
+
+I tried three different models:
+* Linear Regression - Baseline for the model
+* Random Forest Regressor
+* Gradient Boosting Regressor
+
+## Model performance
+The Random Forest and the Gradient Boosting model performed pretty similar as on the test as on the validation sets. I got the following MAE values when the models used every features:
+
+* Linear Regression: MAE = 575600
+* Random Forest: MAE = 439177
+* Gradient Boosting: MAE = 449898
+
+I got the following MAE values when the models used the 21 most corralated features:
+
+* Linear Regression: MAE = 601768
+* Random Forest: MAE = 461680
+* Gradient Boosting: MAE = 464518

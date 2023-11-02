@@ -60,3 +60,12 @@ I got the following MAE values when the models used the 21 most corralated featu
 * Linear Regression: MAE = 601768
 * Random Forest: MAE = 461680
 * Gradient Boosting: MAE = 464518
+
+### Comparison
+As we can see from the table, the usage of the 21 most corralated features was reducing the average "accuracy" around 3-5 percent.
+
+|      Model      | MAE with all features | MAE with most corralated features | Difference in HUF| Difference in %|
+|----------------:|:-----:|:----:|:----:|:----:|
+|Linear Regression|       575600          | 601768 | 26168 | + 4.5%|
+|Random Forest    |       439177          | 461680 | 22503 | + 5.1%|
+|Gradient Boosting|       449898          | 464518 | 14620 | + 3.2%|

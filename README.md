@@ -1,5 +1,5 @@
 # Car price estimator: Project Overview
-* Created a tool that estimates car prices (MAE ~461K HUF) to help customers.
+* Created a [tool](https://github.com/trauerj/Cars_price_Project/blob/main/cars_project_model_building(preprocessing)%20(1).ipynb) that estimates car prices (MAE ~461K HUF) to help customers.
 * Scraped over 1000 car descriptions from joautok using python.
 * Optimized Linear, Random Forest and Gradient Boosting Regressor using GridsearchCV to reach the best model.
 
@@ -8,7 +8,7 @@
 * Packages: pandas, numpy, sklearn, matplotlib, seaborn, plotly, json, bs4, requests, csv, re, io
 
 ## Web Scraping
-Write a web scraper to scrape thousands of car postings(/advertisments) from joautok.hu. With each car, we got the following:
+Write a [web scraper](https://github.com/trauerj/Cars_price_Project/blob/main/joautok_web_scaper_full.ipynb) to scrape thousands of car postings(/advertisments) from joautok.hu. With each car, we got the following:
 * Brand and model
 * Type
 * Dealerships' name
@@ -24,7 +24,7 @@ Write a web scraper to scrape thousands of car postings(/advertisments) from joa
 * Transmission type
 * etc.
 
-## Data cleaning
+## [Data cleaning](https://github.com/trauerj/Cars_price_Project/blob/main/cars_data_project_v1(cleaning).ipynb)
 After scraping the data, I need to clean it up so it was usable for our models. I made the following changes:
 * Removed rows with Nan values
 * Converted strings to numerics by removing words or letters

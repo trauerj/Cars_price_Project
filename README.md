@@ -1,6 +1,6 @@
 # Car price estimator: Project Overview
 * Created a [tool](https://github.com/trauerj/Cars_price_Project/blob/main/cars_project_model_building(preprocessing)%20(1).ipynb) that estimates car prices (MAE ~461K HUF) to help customers.
-* Scraped over 1000 car descriptions from an online (used) car market(place) using python.
+* Scraped over 1000 car descriptions from an online (used) car market(place) using Python.
 * Optimized Linear, Random Forest and Gradient Boosting Regressor using GridsearchCV to reach the best model.
 
 ## Code
@@ -39,7 +39,7 @@ I checked the distribution of the data and looked for outliers with boxplot. I m
 ## Model Building
 First, I transformed the categorical variables into dummy variables. Second, I removed the outliers using the interquartile range (iqr) $`(q1 -1.5*iqr) < data < (q3 + 1.5*iqr)`$
 
-After that i looked for the 21 most correlated features and made the models using just these features.
+After that I looked for the 21 most correlated features and made the models using just these features.
 
 I also split the data into train and test sets with a test size 20% in both scenario.
 

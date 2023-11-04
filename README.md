@@ -1,6 +1,6 @@
 # Car price estimator: Project Overview
 * Created a [tool](https://github.com/trauerj/Cars_price_Project/blob/main/cars_project_model_building(preprocessing)%20(1).ipynb) that estimates car prices (MAE ~461K HUF) to help customers.
-* Scraped over 1000 car descriptions from an online car marketplace using python.
+* Scraped over 1000 car descriptions from an online (used) car market(place) using python.
 * Optimized Linear, Random Forest and Gradient Boosting Regressor using GridsearchCV to reach the best model.
 
 ## Code
@@ -8,7 +8,7 @@
 * Packages: pandas, numpy, sklearn, matplotlib, seaborn, plotly, json, bs4, requests, csv, re, io
 
 ## Web Scraping
-Write a web scraper to scrape thousands of car postings(/advertisments) from an online car marketplace. With each car, we got the following:
+Write a web scraper to scrape thousands of car postings(/advertisments) from an online (used) car market(place). With each car, we got the following:
 * Brand and model
 * Type
 * Dealerships' name
